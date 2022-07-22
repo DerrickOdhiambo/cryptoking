@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './header.scss';
 
@@ -6,12 +7,23 @@ const Header = () => {
   return (
     <section className='header'>
       <div className='header__logo'>
-        <p>
-          Crypto<span>King</span>
-        </p>
+        <img src='/assets/logo.png' alt='' />
       </div>
-      <div className='account'>
-        <span>Account</span>
+      <div className='nav__bar'>
+        <ul>
+          <li>
+            <Link to='/'>Home</Link>
+          </li>
+          <li>
+            <Link to=''>Cryptocurrencies</Link>
+          </li>
+          <li>
+            <Link to=''>Exchange</Link>
+          </li>
+          <li>
+            <Link to=''>News</Link>
+          </li>
+        </ul>
       </div>
     </section>
   );
