@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.data__visualization {
+  .data__stats {
+    display: flex;
+    flex-wrap: wrap;
+
+    .data {
+      width: 50%;
+    }
+  }
+}
