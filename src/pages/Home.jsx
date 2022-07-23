@@ -1,10 +1,20 @@
 import React from 'react';
-import Header from '../components/navbar/Header';
+import Cryptocurrencies from '../components/crypto/Cryptocurrencies';
+import Data from '../components/data/Data';
+
+import { useGetCryptosQuery } from '../services/cryptoApi';
 
 const Home = () => {
+  const { data, isFetching } = useGetCryptosQuery(10);
+  console.log(data);
+  if (isFetching) return 'Loading';
+
+  const globalStats = data?.data?.stats;
+
   return (
     <div>
-      <Header />
+      <Data globalStats={globalStats} />
+      <Cryptocurrencies simplified />
     </div>
   );
 };
