@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300&display=swap');
+
+//font-family
+$Raleway: 'Raleway', sans-serif;
+
+//Media Queries
+@mixin devices($breakpoint) {
+  @if $breakpoint == largeTablet {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 775px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == largePhones {
+    @media only screen and (max-width: 774px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 481px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 361px) {
+      @content;
+    }
+  }
+}
