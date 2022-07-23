@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Cryptocurrencies from '../components/crypto/Cryptocurrencies';
 import Data from '../components/data/Data';
 
@@ -14,7 +15,15 @@ const Home = () => {
   return (
     <div>
       <Data globalStats={globalStats} />
-      <Cryptocurrencies simplified />
+      <div className='top__crypto'>
+        <div className='coin__title'>
+          <h1>Top 10 coins</h1>
+          <span>
+            <Link to='/cryptocurrencies'>see more</Link>
+          </span>
+        </div>
+        <Cryptocurrencies simplified />
+      </div>
     </div>
   );
 };
