@@ -1,16 +1,9 @@
 import React from 'react';
-import { useGetCryptosQuery } from '../../services/cryptoApi';
 import millify from 'millify';
 
 import './data.scss';
 
-const Data = () => {
-  const { data, isFetching } = useGetCryptosQuery();
-  console.log(data);
-  if (isFetching) return 'Loading';
-
-  const globalStats = data?.data?.stats;
-
+const Data = ({ globalStats }) => {
   return (
     <div className='data__visualization'>
       <h1>Global crypto stats</h1>
