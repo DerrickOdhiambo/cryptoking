@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Cryptocurrencies from './components/crypto/Cryptocurrencies';
-import Exchanges from './pages/Exchanges';
 import Home from './pages/Home';
 import News from './components/news/News';
 import Header from './components/navbar/Header';
