@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
+import Loader from '../loader/Loader';
 
 import { useGetCryptosQuery } from '../../services/cryptoApi';
 
@@ -19,9 +20,7 @@ const Cryptocurrencies = ({ simplified }) => {
     setCryptos(filteredList);
   }, [searchTerm, cryptosList]);
 
-  console.log(cryptos);
-
-  if (isFetching) return 'Loading...';
+  if (isFetching) return <Loader />;
 
   return (
     <>
@@ -37,7 +36,7 @@ const Cryptocurrencies = ({ simplified }) => {
       <div className='crypto__list__container'>
         {cryptos?.map((currency) => (
           <Link to={`/currency/${currency.uuid}`}>
-            <div className='crypto__card__container' key={currency.uuid}>
+            <div key={currency.uuid} className='crypto__card__container'>
               <div className='card__title'>
                 <div className='title'>
                   <span>{currency.rank}. </span>
@@ -48,9 +47,15 @@ const Cryptocurrencies = ({ simplified }) => {
                 </div>
               </div>
               <div className='card__body'>
-                <p>{millify(currency.price)}</p>
-                <p>{millify(currency.marketCap)}</p>
-                <p>{millify(currency.change)}</p>
+                <p>
+                  Price <span>{millify(currency.price)}</span>
+                </p>
+                <p>
+                  Market Cap <span>{millify(currency.marketCap)}</span>
+                </p>
+                <p>
+                  Daily Exchange <span>{millify(currency.change)}</span>
+                </p>
               </div>
             </div>
           </Link>
