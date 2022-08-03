@@ -1,0 +1,36 @@
+.news__page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px 10px;
+
+  .news__card {
+    border: 1px solid black;
+
+    a {
+      text-decoration: none;
+
+      .news__title {
+        display: flex;
+      }
+      .news__description {
+        height: 7rem;
+      }
+      .news__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .avatar {
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
