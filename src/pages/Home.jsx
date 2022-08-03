@@ -2,13 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Cryptocurrencies from '../components/crypto/Cryptocurrencies';
 import Data from '../components/data/Data';
+import News from '../components/news/News';
+import Loader from '../components/loader/Loader';
 
 import { useGetCryptosQuery } from '../services/cryptoApi';
 
 const Home = () => {
   const { data, isFetching } = useGetCryptosQuery(10);
-  console.log(data);
-  if (isFetching) return 'Loading';
+
+  if (isFetching) return <Loader />;
 
   const globalStats = data?.data?.stats;
 
@@ -23,6 +25,9 @@ const Home = () => {
           </span>
         </div>
         <Cryptocurrencies simplified />
+        <div className='home__news'>
+          <News simplified />
+        </div>
       </div>
     </div>
   );
