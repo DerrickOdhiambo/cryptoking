@@ -3,6 +3,9 @@
 //font-family
 $Raleway: 'Raleway', sans-serif;
 
+//colors
+$bg__color: #3479ff;
+
 //Media Queries
 @mixin devices($breakpoint) {
   @if $breakpoint == largeTablet {
