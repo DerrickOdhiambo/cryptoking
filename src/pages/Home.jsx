@@ -6,6 +6,7 @@ import News from '../components/news/News';
 import Loader from '../components/loader/Loader';
 
 import { useGetCryptosQuery } from '../services/cryptoApi';
+import LandingPage from '../components/landindPage/LandingPage';
 
 const Home = () => {
   const { data, isFetching } = useGetCryptosQuery(10);
@@ -16,6 +17,7 @@ const Home = () => {
 
   return (
     <div>
+      <LandingPage />
       <Data globalStats={globalStats} />
       <div className='top__crypto'>
         <div className='coin__title'>
