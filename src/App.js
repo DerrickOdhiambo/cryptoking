@@ -4,6 +4,7 @@ import Exchanges from './pages/Exchanges';
 import Home from './pages/Home';
 import News from './components/news/News';
 import Header from './components/navbar/Header';
+import CryptoDetails from './components/cryptoDetails/CryptoDetails';
 
 import './styles/App.scss';
 
@@ -14,9 +15,8 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/exchanges' element={<Exchanges />} />
           <Route path='/cryptocurrencies' element={<Cryptocurrencies />} />
-          <Route path='/cryptocurrencies' element={<Cryptocurrencies />} />
+          <Route path='/currency/:uuid' element={<CryptoDetails />} />
           <Route path='/news' element={<News />} />
         </Routes>
       </div>
