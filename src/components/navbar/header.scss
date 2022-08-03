@@ -9,6 +9,7 @@
   .header__logo {
     display: flex;
     align-items: center;
+    margin-left: 1rem;
 
     img {
       width: 70px;
@@ -17,6 +18,8 @@
   }
 
   .nav__bar {
+    margin-right: 1rem;
+
     ul {
       display: flex;
       list-style-type: none;

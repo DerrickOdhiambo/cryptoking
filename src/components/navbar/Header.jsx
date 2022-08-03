@@ -18,9 +18,6 @@ const Header = () => {
             <Link to='/cryptocurrencies'>Cryptocurrencies</Link>
           </li>
           <li>
-            <Link to='/exchanges'>Exchange</Link>
-          </li>
-          <li>
             <Link to='/news'>News</Link>
           </li>
         </ul>
