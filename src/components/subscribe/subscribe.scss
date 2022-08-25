@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+.subscribe__container {
+  .subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $secondary;
+    padding: 64px 0;
+
+    .subscribe__cta {
+      p {
+        font-family: $serat;
+        font-weight: bold;
+        color: white;
+        line-height: 30px;
+        text-transform: capitalize;
+        margin-right: 16px;
+        font-size: 24px;
+      }
+    }
+
+    .subscribe__form {
+      .form__control {
+        display: flex;
+        align-items: center;
+
+        input[type='email'] {
+          padding: 24px;
+          width: 400px;
+          border-radius: 100px 0 0 100px;
+          outline: none;
+          border: none;
+        }
+        ::placeholder {
+          color: rgba($color: $black, $alpha: 0.75);
+          font-size: 16px;
+        }
+        button {
+          padding: 22px 48px;
+          border-radius: 0 100px 100px 0;
+          text-transform: uppercase;
+          font-family: $serat;
+          font-weight: 500;
+          font-size: 16px;
+          background: $primary;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
