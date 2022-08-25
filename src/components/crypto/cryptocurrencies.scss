@@ -1,26 +1,71 @@
 @import '../../styles/variables';
 
-.crypto__list__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 10px 10px;
+.top__crypto {
+  width: 75%;
+  margin: 56px auto;
+  padding: 56px;
+  background: rgb(250, 250, 250);
+  background: radial-gradient(
+    circle,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 
-  a {
-    text-decoration: none;
+  .crypto__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    .crypto__card__container {
-      border: 1px solid black;
-      padding: 0.5rem;
+    h3 {
+      font-family: $serat;
+    }
 
-      .card__title {
-        display: flex;
-        justify-content: space-between;
+    p {
+      a {
+        img {
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+  }
+  .crypto__list__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-        .image {
-          img {
-            height: 32px;
-            width: 32px;
+    a {
+      text-decoration: none;
+      color: $black;
+
+      .crypto__card__container {
+        padding: 1.8rem;
+        line-height: 31px;
+        border: 1px solid rgba($color: $black, $alpha: 0.15);
+        border-radius: 8px;
+        box-shadow: $shadow;
+        background: white;
+        margin-top: 32px;
+
+        .card__title {
+          display: flex;
+          flex-direction: column-reverse;
+
+          .title {
+            font-family: $serat;
+            font-weight: bold;
+            color: rgba($color: $black, $alpha: 0.75);
+          }
+
+          .image {
+            img {
+              border: 1px solid rgba($color: $black, $alpha: 0.1);
+              border-radius: 8px;
+              padding: 8px;
+              height: 56px;
+              width: 56px;
+            }
           }
         }
       }

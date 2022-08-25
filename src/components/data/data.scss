@@ -1,12 +1,65 @@
 @import '../../styles/variables';
 
 .data__visualization {
-  .data__stats {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  width: 85%;
+  margin: 56px auto;
 
-    .data {
-      width: 50%;
+  .data__graph {
+    img {
+      height: 550px;
+      width: 500px;
+    }
+  }
+
+  .data__stats {
+    h3 {
+      font-family: $serat;
+      color: $black;
+      text-transform: capitalize;
+    }
+
+    .data__container {
+      display: flex;
+      justify-content: center;
+
+      .data__stats__1 {
+        display: flex;
+        flex-direction: column;
+      }
+      .data__stats__2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 48px;
+      }
+    }
+  }
+
+  .data {
+    height: 104px;
+    width: 256px;
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $gradient;
+    color: white;
+    border-radius: 8px;
+    box-shadow: $shadow;
+    font-family: $serat;
+
+    p {
+      font-weight: 600;
+      text-transform: capitalize;
+      color: whitesmoke;
+    }
+
+    span {
+      font-size: 32px;
+      font-weight: bold;
     }
   }
 }

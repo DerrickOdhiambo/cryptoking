@@ -7,6 +7,8 @@
   padding: 16px 2rem;
   border-bottom: 1px solid rgba($color: #262d33, $alpha: 0.1);
   font-size: 17px;
+  font-family: $serat;
+  font-weight: bold;
 
   .header__logo {
     display: flex;
@@ -28,7 +30,6 @@
           margin-left: 64px;
           line-height: 24px;
           color: #262d33;
-          font-weight: bold;
         }
       }
     }
@@ -38,8 +39,8 @@
     align-items: center;
 
     .contacts {
-      font-weight: bold;
       color: $secondary;
+      font-weight: 600;
     }
 
     .line {

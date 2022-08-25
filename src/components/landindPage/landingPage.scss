@@ -1,60 +1,38 @@
 @import '../../styles/variables';
 
 .landing__page {
-  .landing__image {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90vh;
+  width: 85%;
+  margin: auto;
 
   .landing__cta {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translate(-5%, -50%);
-
+    h3 {
+      line-height: 32px;
+      font-family: $serat;
+      font-weight: 300;
+      font-size: 36px;
+      color: $secondary;
+    }
     h1 {
-      text-transform: uppercase;
-      color: white;
-      font-weight: 900;
-      font-size: 3rem;
-
-      span {
-        color: #ffc803;
-      }
+      font-family: $serat;
+      font-size: 55px;
+      text-transform: capitalize;
+      line-height: 80px;
     }
-
-    .fill {
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 20px;
-      color: $bg__color;
-      letter-spacing: 1px;
-      padding: 13px 50px 13px;
-      outline: 0;
-      border: 1px solid white;
-      cursor: pointer;
-      position: relative;
-      background-color: rgba(0, 0, 0, 0);
+    p {
+      font-size: 21px;
+      line-height: 33px;
+      margin-bottom: 40px;
+      color: rgba($color: $black, $alpha: 0.75);
     }
-
-    .fill::after {
-      content: '';
-      background-color: $orange;
-      width: 100%;
-      z-index: -1;
-      position: absolute;
-      height: 100%;
-      top: 7px;
-      left: 7px;
-      transition: 0.2s;
-    }
-
-    .fill:hover::after {
-      top: 0px;
-      left: 0px;
-      color: black;
+  }
+  .landing__image {
+    img {
+      height: 550px;
+      width: 550px;
     }
   }
 }
