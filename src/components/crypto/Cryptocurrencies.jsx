@@ -8,7 +8,7 @@ import { useGetCryptosQuery } from '../../services/cryptoApi';
 import './cryptocurrencies.scss';
 
 const Cryptocurrencies = ({ simplified }) => {
-  const count = simplified ? 4 : 100;
+  const count = simplified ? 5 : 100;
   const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -36,7 +36,7 @@ const Cryptocurrencies = ({ simplified }) => {
       <div className='top__crypto'>
         {simplified && (
           <div className='crypto__header'>
-            <h3>Top Cryptocurrencies</h3>
+            <h3>Top Crypto</h3>
             <p>
               <Link to='/cryptocurrencies'>
                 <img src='/assets/forward.png' alt='forward arrow' />
@@ -59,13 +59,13 @@ const Cryptocurrencies = ({ simplified }) => {
                 </div>
                 <div className='card__body'>
                   <p>
-                    Price <span>{millify(currency.price)}</span>
+                    Price: <span>{millify(currency.price)}</span>
                   </p>
                   <p>
-                    Market Cap <span>{millify(currency.marketCap)}</span>
+                    Market Cap: <span>{millify(currency.marketCap)}</span>
                   </p>
                   <p>
-                    Daily Exchange <span>{millify(currency.change)}</span>
+                    Daily Exchange: <span>{millify(currency.change)}</span>
                   </p>
                 </div>
               </div>

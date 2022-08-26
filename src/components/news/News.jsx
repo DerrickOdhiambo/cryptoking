@@ -21,7 +21,7 @@ const News = ({ simplified }) => {
     <div className='news'>
       {simplified && (
         <div className='more__news'>
-          <h3>Top cryptocurrency news</h3>
+          <h3>Top news</h3>
           <Link to='/news'>
             <img src='/assets/forward.png' alt='forward arrow' />
           </Link>

@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/breakpoints.scss';
 
 .news {
   width: 90%;
@@ -34,7 +35,7 @@
       border-radius: 8px;
       margin: 0 0.2rem;
       padding: 1rem;
-      box-shadow: $shadow;
+      box-shadow: $shadow2;
 
       a {
         text-decoration: none;
@@ -51,8 +52,8 @@
 
             p {
               font-family: $serat;
-              color: $secondary;
-              font-weight: bold;
+              color: rgba($color: $secondary, $alpha: 0.95);
+              font-weight: 600;
               line-height: 24px;
             }
 
@@ -83,7 +84,6 @@
           .avatar {
             display: flex;
             align-items: center;
-            font-family: $serat;
             color: $black;
             font-weight: 400;
 
@@ -92,6 +92,26 @@
               height: 1.5rem;
               margin-right: 8px;
             }
+          }
+        }
+      }
+    }
+  }
+
+  @include media('<=phone') {
+    width: 100%;
+    padding: 8px;
+
+    .news__page {
+      grid-template-columns: 1fr;
+      gap: 32px;
+
+      .news__card {
+        padding: 0.5rem;
+        box-shadow: $shadow2;
+        a {
+          .news__title {
+            flex-direction: column-reverse;
           }
         }
       }

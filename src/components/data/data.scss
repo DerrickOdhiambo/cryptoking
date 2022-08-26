@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/breakpoints.scss';
 
 .data__visualization {
   display: flex;
@@ -60,6 +61,31 @@
     span {
       font-size: 32px;
       font-weight: bold;
+    }
+  }
+
+  @include media('<=phone') {
+    flex-direction: column;
+
+    .data__graph {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .data__stats {
+      h3 {
+        text-align: center;
+      }
+
+      .data__container {
+        flex-direction: column;
+        justify-content: center;
+
+        .data__stats__2 {
+          margin-left: 0;
+        }
+      }
     }
   }
 }

@@ -5,7 +5,7 @@ import './coinInfo.scss';
 const CoinInfo = () => {
   return (
     <div className='info__container'>
-      <h3>Why get into cryptocurrency?</h3>
+      {/* <h3>Why get into cryptocurrency?</h3> */}
       <div className='coin__info'>
         <div className='info'>
           <img src='/assets/building.png' alt='bank building' />

@@ -1,4 +1,6 @@
 @import '../../styles/variables';
+@import '../../styles/breakpoints.scss';
+
 .info__container {
   margin: 56px 0;
   padding: 48px 0;
@@ -33,11 +35,16 @@
 
       p {
         text-transform: capitalize;
-        font-family: $serat;
-        font-weight: 700;
+        font-weight: 500;
         margin-top: 8px;
         color: rgba($color: $black, $alpha: 0.75);
       }
+    }
+  }
+
+  @include media('<=phone') {
+    .coin__info {
+      flex-direction: column;
     }
   }
 }

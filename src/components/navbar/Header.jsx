@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { GiHamburgerMenu } from 'react-icons/gi';
+
 import './header.scss';
 
 const Header = () => {
@@ -36,6 +38,9 @@ const Header = () => {
             <img src='/assets/social-instagram.svg' alt='' />
           </span>
         </div>
+      </div>
+      <div className='burger'>
+        <GiHamburgerMenu />
       </div>
     </section>
   );

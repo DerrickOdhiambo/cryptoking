@@ -1,0 +1,80 @@
+@import '../../styles/variables';
+@import '../../styles/breakpoints.scss';
+
+.footer__container {
+  background: #262d33;
+  .footer {
+    .upper__footer {
+      padding: 104px 80px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 10px;
+      color: rgb(221, 218, 218);
+
+      h4 {
+        color: $black;
+        font-family: $serat;
+        text-transform: capitalize;
+        margin-bottom: 16px;
+        color: whitesmoke;
+      }
+
+      .links {
+        p {
+          a {
+            color: rgb(221, 218, 218);
+            text-decoration: none;
+            transition: 0.2s;
+
+            &:hover {
+              color: rgb(238, 238, 238);
+              transition: 0.2s;
+            }
+          }
+        }
+      }
+
+      .support {
+        p {
+          text-transform: capitalize;
+        }
+      }
+      .socials {
+        span {
+          img {
+            height: 32px;
+            width: 32px;
+            background: rgb(221, 218, 218);
+            margin-right: 10px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+    .lower__footer {
+      background: black;
+      color: rgb(221, 218, 218);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        padding: 8px;
+        text-transform: capitalize;
+        font-family: $serat;
+        font-weight: 600;
+        font-size: 10px;
+      }
+    }
+  }
+
+  @include media('<=phone') {
+    .footer {
+      .upper__footer {
+        padding: 16px 8px;
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+  }
+}
