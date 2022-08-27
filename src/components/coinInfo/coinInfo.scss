@@ -45,6 +45,57 @@
   @include media('<=phone') {
     .coin__info {
       flex-direction: column;
+      width: 95%;
+
+      .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        border: 1px solid rgba($color: $black, $alpha: 0.15);
+        background: white;
+        box-shadow: $shadow2;
+        width: 100%;
+        margin: 8px 0;
+        padding: 8px 0 8px 32px;
+
+        p {
+          margin-left: 8px;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  @include media('>phone', '<600px') {
+    .coin__info {
+      flex-direction: column;
+      width: 90%;
+
+      .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        border: 1px solid rgba($color: $black, $alpha: 0.15);
+        background: white;
+        box-shadow: $shadow2;
+        width: 100%;
+        margin: 8px 0;
+        padding: 8px 0 8px 32px;
+
+        p {
+          margin-left: 16px;
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  @include media('>=600px', '<768px') {
+    .coin__info {
+      width: 100%;
+      padding: 0 8px;
     }
   }
 }

@@ -65,6 +65,7 @@
   }
 
   @include media('<=phone') {
+    width: 100%;
     flex-direction: column;
 
     .data__graph {
@@ -86,6 +87,65 @@
           margin-left: 0;
         }
       }
+    }
+    .data {
+      width: 100%;
+      padding: 0 16px;
+
+      span {
+        font-size: 28px;
+      }
+    }
+  }
+
+  @include media('>phone', '<600px') {
+    flex-direction: column;
+
+    .data__graph {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .data__stats {
+      h3 {
+        text-align: center;
+      }
+
+      .data__container {
+        flex-direction: column;
+        justify-content: center;
+
+        .data__stats__2 {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  @include media('>=600px', '<992px') {
+    flex-direction: column;
+
+    .data__graph {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  @include media('>=992px', '<1200px') {
+    width: 90%;
+
+    .data__graph {
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .data {
+      width: 204px;
     }
   }
 }

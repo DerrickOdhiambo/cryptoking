@@ -67,7 +67,7 @@
     display: none;
   }
 
-  @include media('<=phone') {
+  @include media('<tablet') {
     padding: 8px 0.5rem;
     .header__logo {
       display: flex;
@@ -86,6 +86,22 @@
     }
     .burger {
       display: block;
+    }
+  }
+
+  @include media('>=tablet', '<992px') {
+    padding: 8px 0.5rem;
+    .header__logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 32px;
+        width: 32px;
+      }
+    }
+    .contact__socials {
+      display: none;
     }
   }
 }

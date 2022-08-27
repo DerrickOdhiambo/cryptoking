@@ -66,4 +66,51 @@
       }
     }
   }
+
+  @include media('>phone', '<600px') {
+    .cta__container {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba($color: whitesmoke, $alpha: 0.8);
+      text-align: center;
+      width: 90%;
+      padding: 32px 16px;
+      border-radius: 16px;
+
+      h2 {
+        line-height: 32px;
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .cta__button {
+        justify-content: center;
+      }
+    }
+  }
+
+  @include media('>=600px', '<992px') {
+    .cta__container {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba($color: whitesmoke, $alpha: 0.8);
+      text-align: start;
+      width: 90%;
+      padding: 32px 16px;
+      border-radius: 16px;
+
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @include media('>=992px', '<1200px') {
+    .cta__container {
+      left: 38%;
+    }
+  }
 }

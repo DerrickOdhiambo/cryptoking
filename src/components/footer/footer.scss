@@ -77,4 +77,41 @@
       }
     }
   }
+  @include media('>phone', '<=425px') {
+    .footer {
+      .upper__footer {
+        padding: 16px 8px;
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+  }
+
+  @include media('>425px', '<600px') {
+    .footer {
+      .upper__footer {
+        padding: 32px;
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+  }
+
+  @include media('>=600px', '<tablet') {
+    .footer {
+      .upper__footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        padding: 32px;
+      }
+    }
+  }
+
+  @include media('>=tablet', '<992px') {
+    .footer {
+      .upper__footer {
+        padding: 80px 32px;
+      }
+    }
+  }
 }

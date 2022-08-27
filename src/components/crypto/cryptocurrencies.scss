@@ -25,6 +25,14 @@
       outline: 1px solid rgba($color: $black, $alpha: 0.15);
     }
   }
+
+  @include media('<tablet') {
+    width: 90%;
+
+    input[type='text'] {
+      width: 100%;
+    }
+  }
 }
 
 .top__crypto {
@@ -119,6 +127,32 @@
 
     .crypto__list__container {
       display: block;
+    }
+  }
+
+  @include media('>phone', '<600px') {
+    width: 100%;
+    padding: 32px;
+
+    h3 {
+      color: $black;
+    }
+
+    .crypto__list__container {
+      display: block;
+    }
+  }
+
+  @include media('>=600px', '<1200px') {
+    width: 100%;
+    padding: 32px;
+
+    h3 {
+      color: $black;
+    }
+
+    .crypto__list__container {
+      justify-content: space-evenly;
     }
   }
 }
